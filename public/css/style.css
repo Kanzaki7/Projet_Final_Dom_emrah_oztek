@@ -1,3 +1,7 @@
+/* références : 
+- pour l'animation du dropdown, l'exemple 7 de ce site :
+https://alvarotrigo.com/blog/drop-down-menu-javascript/ */
+
 body {
     margin: 0;
     padding: 0;
@@ -36,7 +40,7 @@ nav {
     height: 15%;
     /* background-color: blue; */
     position: fixed;
-    /* top: 0; */
+    top: 0;
     z-index: 1;
     width: 100%;
 }
@@ -134,7 +138,8 @@ nav {
 }
 
 .hero {
-    height: 100%;
+    height: 80%;
+    margin-top: 110px;
     display: flex;
     justify-content: center;
     /* background-color: red; */
@@ -147,6 +152,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 .contentText {
@@ -208,6 +214,7 @@ cursor: pointer;
     background-repeat: no-repeat;
     /* background-color: red; */
     margin-right: 120px;
+    margin-top: 30px;
  
     animation-name: animate;
     animation-direction: alternate;
@@ -229,20 +236,67 @@ cursor: pointer;
 }
 
 .divDrop {
-    display: flex;
+    /* display: flex; */
     background: none;
+    position: relative;
 }
 
 .dropListe {
     display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 205px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    top: 35px;
+    animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    animation-duration: 0.35s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.35s;
+    -webkit-animation-fill-mode: both;
 }
 
-.dropOrg {
+.dropListe a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    /* display: none; */
+}
+
+.showDropListe {
     display: flex;
-    gap: 8px;
+    opacity: 0;
+    z-index: 10;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
 }
 
-.dropSymbol {
-    font-weight: lighter;
-    transform: rotate(90deg);
+@keyframes fadeInUp {
+    from {
+      transform: translate3d(0, 30px, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInDown {
+    from {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+    to {
+      transform: translate3d(0, 20px, 0);
+      opacity: 0;
+    }
+  }
+
+.fa-chevron-down {
+    margin-left: 10px;
 }
