@@ -232,3 +232,17 @@ cursor: pointer;
     display: flex;
     background: none;
 }
+
+.dropListe {
+    display: none;
+}
+
+.dropOrg {
+    display: flex;
+    gap: 8px;
+}
+
+.dropSymbol {
+    font-weight: lighter;
+    transform: rotate(90deg);
+}
