@@ -20,6 +20,18 @@ console.log(boxesArray);
 let icones = document.querySelectorAll(".fa-solid");
 console.log(boxesArray);
 
+let circles = document.querySelectorAll(".circle");
+let circlesArray = Array.from(circles);
+
+// déclaration des fonctions 
+
+let addActive = (e) => {
+    e.classList.add("activeCircle");
+}
+
+let removeActive = (e) => {
+    e.classList.remove("activeCircle");
+}
 
 // addEventListeners : 
 
@@ -133,3 +145,11 @@ boxesArray[5].addEventListener("mouseout", () => {
     boxesArray[5].children[1].children[1].classList.toggle("iconWhite");
 })
 
+circlesArray.forEach(element => {
+    element.addEventListener("click", () => {
+        circlesArray.forEach(element => {
+            removeActive(element);
+        });
+        addActive(element);
+    })
+});

@@ -489,7 +489,7 @@ cursor: pointer;
 }
 
 .servTitle {
-    color: #2d4964;
+    color: #444444;
     font-size: 33px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
@@ -722,3 +722,75 @@ cursor: pointer;
 .marginShield {
     margin-left: 100px;
 }
+
+
+/* section 5 - Testimonials */
+
+.section-testimonials {
+    height: 900px;
+    width: 100%;
+    background-color: #f9f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.divTitleTestimonials {
+    width: 90%;
+    height: 25%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.servTitle {
+    color: #444444;
+    font-size: 33px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    /* margin-top: 180px; */
+    margin-bottom: 20px;
+}
+
+.ligneTitle {
+    height: 5px;
+    width: 50px;
+    background-color: #6937e9;
+}
+
+.sec5Para {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+    width: 90%;
+}
+
+.sec5Div2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 70%;
+    width: 100%;
+}
+
+.divCircle {
+    display: flex;
+    gap: 15px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #5846f9;
+    cursor: pointer;
+    transition: all ease-in-out .1s;
+}
+
+.activeCircle {
+    background-color: #5846f9;
+}
+
