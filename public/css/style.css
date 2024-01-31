@@ -727,7 +727,7 @@ cursor: pointer;
 /* section 5 - Testimonials */
 
 .section-testimonials {
-    height: 900px;
+    height: 800px;
     width: 100%;
     background-color: #f9f8ff;
     display: flex;
@@ -750,7 +750,7 @@ cursor: pointer;
     font-size: 33px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    /* margin-top: 180px; */
+    margin-top: 100px;
     margin-bottom: 20px;
 }
 
@@ -764,16 +764,46 @@ cursor: pointer;
     margin-top: 20px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     width: 90%;
 }
 
 .sec5Div2 {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 70%;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
     width: 100%;
+    gap: 20px;
+}
+
+.carousel {
+    width: 3380px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    /* background-color: blue; */
+    gap: 65px;
+    transition: all ease-in-out 0.5s;
+    transform: translateX(975px);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 2550px;
+    height: 330px;
+    /* background-color: red;  */
+}
+
+.divCards {
+    width: 650px;
+    height: 100%;
+    /* background-color: yellow; */
+    border-radius: 5px;
 }
 
 .divCircle {
@@ -782,8 +812,8 @@ cursor: pointer;
 }
 
 .circle {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     border: 2px solid #5846f9;
     cursor: pointer;
@@ -792,5 +822,85 @@ cursor: pointer;
 
 .activeCircle {
     background-color: #5846f9;
+}
+
+.card {
+    /* background-color: #e90e6f; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    height: 70%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contentCard {
+    width: 100%;
+    height: 95%;
+    background-color: white;
+    font-style: italic;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+}
+
+.pCard {
+    width: 94%;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.titleCard {
+    /* background-color: violet; */
+    font-size: 19px;
+    color: #2d4964;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 35px;
+    margin-top: 50px;
+}
+
+.paraCard {
+    /* background-color: orange; */
+    color: #9e9e9f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.fa-quote-left {
+    font-size: 27px;
+    color: #b1a9fc;
+    margin-right: 10px;
+}
+
+.fa-quote-right {
+    font-size: 27px;
+    color: #b1a9fc;
+    margin-left: 10px;
+}
+
+.cardAvatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 170px;
+    left: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+
+.fa-user-ninja {
+    color: #5a6d80;
+    font-size: 45px;
+}
+.fa-user-astronaut {
+    color: #5a6d80;
+    font-size: 45px;
 }
 

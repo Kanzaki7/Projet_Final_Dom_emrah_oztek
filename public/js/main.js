@@ -23,6 +23,8 @@ console.log(boxesArray);
 let circles = document.querySelectorAll(".circle");
 let circlesArray = Array.from(circles);
 
+let carousel = document.querySelector(".carousel");
+
 // déclaration des fonctions 
 
 let addActive = (e) => {
@@ -32,6 +34,68 @@ let addActive = (e) => {
 let removeActive = (e) => {
     e.classList.remove("activeCircle");
 }
+
+let transform = (e) => {
+    if (e == circlesArray[0]) {
+        carousel.style = "transform: translateX(975px);"
+    } else if (e == circlesArray[1]) {
+        carousel.style = "transform: translateX(475px);"
+    } else if (e == circlesArray[2]) {
+        carousel.style = "transform: translateX(-25px);"
+    } else if (e == circlesArray[3]) {
+        carousel.style = "transform: translateX(-525px);"
+    } else if (e == circlesArray[4]) {
+        carousel.style = "transform: translateX(-1025px);"
+    } else if (e == circlesArray[5]) {
+        carousel.style = "transform: translateX(-1525px);"
+    }
+}
+
+let movement = 975;
+setInterval(() => { 
+    carousel.style.transform = `translateX(${movement}px)`;
+    movement -= 500;
+    if (movement == 975) {
+        circlesArray[0].classList.add("activeCircle");
+        circlesArray[1].classList.remove("activeCircle");
+        circlesArray[2].classList.remove("activeCircle");
+        circlesArray[3].classList.remove("activeCircle");
+        circlesArray[4].classList.remove("activeCircle");
+    } else if (movement == 475) {
+        circlesArray[1].classList.add("activeCircle");
+        circlesArray[0].classList.remove("activeCircle");
+        circlesArray[2].classList.remove("activeCircle");
+        circlesArray[3].classList.remove("activeCircle");
+        circlesArray[4].classList.remove("activeCircle");
+    } else if (movement == -25) {
+        circlesArray[2].classList.add("activeCircle");
+        circlesArray[1].classList.remove("activeCircle");
+        circlesArray[0].classList.remove("activeCircle");
+        circlesArray[3].classList.remove("activeCircle");
+        circlesArray[4].classList.remove("activeCircle");
+    } else if (movement == -525) {
+        circlesArray[3].classList.add("activeCircle");
+        circlesArray[1].classList.remove("activeCircle");
+        circlesArray[2].classList.remove("activeCircle");
+        circlesArray[0].classList.remove("activeCircle");
+        circlesArray[4].classList.remove("activeCircle");
+    } else if (movement == -1025) {
+        circlesArray[4].classList.add("activeCircle");
+        circlesArray[1].classList.remove("activeCircle");
+        circlesArray[2].classList.remove("activeCircle");
+        circlesArray[3].classList.remove("activeCircle");
+        circlesArray[0].classList.remove("activeCircle");
+    } else if (movement == -1525) {
+        circlesArray[4].classList.add("activeCircle");
+        circlesArray[1].classList.remove("activeCircle");
+        circlesArray[2].classList.remove("activeCircle");
+        circlesArray[3].classList.remove("activeCircle");
+        circlesArray[0].classList.remove("activeCircle");
+        movement = 975;
+    }
+}, 2000)
+
+
 
 // addEventListeners : 
 
@@ -145,11 +209,14 @@ boxesArray[5].addEventListener("mouseout", () => {
     boxesArray[5].children[1].children[1].classList.toggle("iconWhite");
 })
 
+
+// pour les cercles du carousel de la section 5
 circlesArray.forEach(element => {
     element.addEventListener("click", () => {
         circlesArray.forEach(element => {
             removeActive(element);
         });
+        transform(element);
         addActive(element);
     })
 });
