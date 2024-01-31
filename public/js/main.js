@@ -5,6 +5,7 @@
 
 // déclaration des variables :
 
+
 let textStarted = document.querySelector(".textStarted");
 let textStarted2 = document.querySelector(".textStarted2");
 
@@ -131,3 +132,4 @@ boxesArray[5].addEventListener("mouseout", () => {
     boxesArray[5].children[1].children[0].classList.toggle("iconWhite");
     boxesArray[5].children[1].children[1].classList.toggle("iconWhite");
 })
+

@@ -47,6 +47,7 @@ nav {
     /* position: relative; */
 }
 
+
 .divCachéNav {
     height: 10%;
     width: 100%;
@@ -617,4 +618,107 @@ cursor: pointer;
 }
 .colorSkyBlue {
     background-color: #0edbce;
+}
+
+
+/* section 4 - Features */
+
+.section-features {
+    height: 1100px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.sec4Para {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+    width: 90%;
+}
+
+
+.sec4Div2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 70%;
+    width: 100%;
+}
+
+.divSVG {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.sec4Liste {
+    width: 50%;
+    height: 100%;
+}
+
+.svg {
+    width: 95%;
+    height: 90%;
+    background-image: url(../assets/img/features.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.divListe {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 90px;
+    margin-left: 75px;
+}
+
+.divIcon {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 50px;
+    height: 50px;
+}
+
+.titreListe {
+    color: #444444;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.paraListe {
+    color: #939393;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.fa-palette {
+    font-size: 40px;
+    color: #5846f9;
+}
+.fa-cube {
+    font-size: 40px;
+    color: #5846f9;
+}
+.fa-photo-film {
+    font-size: 40px;
+    color: #5846f9;
+}
+.fa-shield {
+    font-size: 40px;
+    color: #5846f9;
+}
+
+.marginShield {
+    margin-left: 100px;
 }
