@@ -2,6 +2,9 @@
 - pour l'animation du dropdown, l'exemple 7 de ce site :
 https://alvarotrigo.com/blog/drop-down-menu-javascript/ */
 
+/* - pour le ruban sur la dernière carte de la section Prices : */
+/* https://stackoverflow.com/questions/30503866/right-corner-ribbon-on-a-div-css */
+
 body {
     margin: 0;
     padding: 0;
@@ -918,7 +921,7 @@ cursor: pointer;
     font-size: 33px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    margin-top: 120px;
+    margin-top: 90px;
     margin-left: 80px;
 }
 
@@ -1037,4 +1040,233 @@ cursor: pointer;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* section 7 - pricing */
+
+.section-pricing {
+    height: 950px;
+    width: 100%;
+    background-color: #f9f8ff;
+
+}
+
+.sec7Div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sec7Div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-left: 75px;
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentToggle {
+    width: 70px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textToggle {
+    background-color: #f8f8f8;
+    width: 80px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cdcdcd;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.textToggleBlue {
+    color: #887afb;
+} 
+
+.blue {
+    width: 70px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #8576fb;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rond {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all ease-in-out .3s;
+}
+
+.rondRight {
+    transform: translateX(6px);
+}
+
+.rondLeft {
+    transform: translateX(36px);
+}
+
+.cardsPrice {
+    width: 95%;
+    height: 470px;
+    /* background-color: red; */
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardPrice {
+    position: relative;
+    width: 320px;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.free {
+    width: 100%;
+    height: 15%;
+    color: #2d4964;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #f8f8f8;
+}
+
+.business {
+    background-color: #5846f9;
+    color: white;
+}
+
+.contentCard {
+    width: 100%;
+    height: 75%;
+    border-radius: 0px;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+.currency{
+    position: absolute;
+    top: 5px;
+    left: -17px;
+    font-weight: 600;
+    font-size: 25px;
+    font-style: normal;
+}
+
+.digit {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.numberPrice {
+    position: relative;
+    color: #5c4bf9;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.priceMonth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* height: 20%; */
+    margin-top: 10px;
+}
+
+.month {
+    color: #c9c9c9;
+    font-style: normal;
+}
+
+.listeCard {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.barré {
+    color: #d0d0d0;
+    text-decoration: line-through;
+}
+
+.divBuy {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.buy {
+    width: 160px;
+    height: 50px;
+    font-weight: 600;
+    background-color: #6f33e3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ruban */
+
+.ribbon {
+    font-size: 15px;
+    color: #fff;
+}
+.ribbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1.8;
+    padding-inline: 1lh;
+    clip-path: polygon(
+      100% 100%,0 100%,999px calc(100% - 999px),calc(100% - 999px) calc(100% - 999px));
+    transform: translate(calc((1 - cos(45deg))*100%), -100%) rotate(45deg);
+    transform-origin: 0% 100%;
+    background-color: #5846f9;
 }

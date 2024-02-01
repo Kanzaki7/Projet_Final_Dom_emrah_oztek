@@ -35,6 +35,11 @@ let divImgArray = Array.from(divImg);
 let divImgHiddenArray = Array.from(divImgHidden);
 let divImgHiddenBisArray = Array.from(divImgHiddenBis);
 
+let textToggle = document.querySelectorAll(".textToggle");
+let textToggleArray = Array.from(textToggle);
+let blue = document.querySelector(".blue");
+let rond = document.querySelector(".rond");
+
 // déclaration des fonctions 
 
 let addActive = (e) => {
@@ -237,7 +242,7 @@ circlesArray.forEach(element => {
     })
 });
 
-// pour les titres de la section6
+// pour la section 6
 techArray.forEach(element => {
     element.addEventListener("click", () => {
         techArray.forEach(element => {
@@ -295,3 +300,31 @@ techArray.forEach(element => {
         }
     })
 });
+
+let digit = document.querySelectorAll(".digit");
+let digitArray = Array.from(digit);
+let month = document.querySelectorAll(".month");
+let monthArray = Array.from(month);
+
+blue.addEventListener("click", ()=>{
+    textToggleArray.forEach(element => {
+        element.classList.toggle("textToggleBlue");
+    });
+    rond.classList.toggle("rondRight");
+    rond.classList.toggle("rondLeft");
+    if (rond.classList.contains("rondLeft")) {
+        digitArray[1].innerText = "190";
+        digitArray[2].innerText = "290";
+        digitArray[3].innerText = "490";
+        monthArray.forEach(element => {
+            element.innerText = "/ year";
+        });
+    } else {
+        digitArray[1].innerText = "19";
+        digitArray[2].innerText = "29";
+        digitArray[3].innerText = "49";
+        monthArray.forEach(element => {
+            element.innerText = "/ month";
+        });
+    }
+})
