@@ -40,6 +40,23 @@ let textToggleArray = Array.from(textToggle);
 let blue = document.querySelector(".blue");
 let rond = document.querySelector(".rond");
 
+let digit = document.querySelectorAll(".digit");
+let digitArray = Array.from(digit);
+let month = document.querySelectorAll(".month");
+let monthArray = Array.from(month);
+
+let chevronsFAQ = document.querySelectorAll(".chevronFAQ");
+let chevronsFAQArray = Array.from(chevronsFAQ);
+let divsFAQ = document.querySelectorAll(".divFAQ");
+let divsFAQArray = Array.from(divsFAQ);
+let paraFAQ = document.querySelectorAll(".paraFAQ");
+let paraFAQArray = Array.from(paraFAQ);
+let titleFAQ = document.querySelectorAll(".titleFAQ");
+let titleFAQArray = Array.from(titleFAQ);
+let divChevron = document.querySelectorAll("divChevron");
+let divChevronArray = Array.from(divChevron);
+
+
 // déclaration des fonctions 
 
 let addActive = (e) => {
@@ -77,37 +94,37 @@ setInterval(() => {
     carousel.style.transform = `translateX(${movement}px)`;
     movement -= 500;
     if (movement == 975) {
-        circlesArray[0].classList.add("activeCircle");
+        circlesArray[0].classList.toggle("activeCircle");
         circlesArray[1].classList.remove("activeCircle");
         circlesArray[2].classList.remove("activeCircle");
         circlesArray[3].classList.remove("activeCircle");
         circlesArray[4].classList.remove("activeCircle");
     } else if (movement == 475) {
-        circlesArray[1].classList.add("activeCircle");
+        circlesArray[1].classList.toggle("activeCircle");
         circlesArray[0].classList.remove("activeCircle");
         circlesArray[2].classList.remove("activeCircle");
         circlesArray[3].classList.remove("activeCircle");
         circlesArray[4].classList.remove("activeCircle");
     } else if (movement == -25) {
-        circlesArray[2].classList.add("activeCircle");
+        circlesArray[2].classList.toggle("activeCircle");
         circlesArray[1].classList.remove("activeCircle");
         circlesArray[0].classList.remove("activeCircle");
         circlesArray[3].classList.remove("activeCircle");
         circlesArray[4].classList.remove("activeCircle");
     } else if (movement == -525) {
-        circlesArray[3].classList.add("activeCircle");
+        circlesArray[3].classList.toggle("activeCircle");
         circlesArray[1].classList.remove("activeCircle");
         circlesArray[2].classList.remove("activeCircle");
         circlesArray[0].classList.remove("activeCircle");
         circlesArray[4].classList.remove("activeCircle");
     } else if (movement == -1025) {
-        circlesArray[4].classList.add("activeCircle");
+        circlesArray[4].classList.toggle("activeCircle");
         circlesArray[1].classList.remove("activeCircle");
         circlesArray[2].classList.remove("activeCircle");
         circlesArray[3].classList.remove("activeCircle");
         circlesArray[0].classList.remove("activeCircle");
     } else if (movement == -1525) {
-        circlesArray[4].classList.add("activeCircle");
+        circlesArray[4].classList.toggle("activeCircle");
         circlesArray[1].classList.remove("activeCircle");
         circlesArray[2].classList.remove("activeCircle");
         circlesArray[3].classList.remove("activeCircle");
@@ -116,7 +133,139 @@ setInterval(() => {
     }
 }, 5000)
 
-
+let addHeight = (e) => {
+    if (e == chevronsFAQArray[0]) {
+        divsFAQArray[0].classList.toggle("divFAQHeight");
+        divsFAQArray[1].classList.remove("divFAQHeight");
+        divsFAQArray[2].classList.remove("divFAQHeight");
+        divsFAQArray[3].classList.remove("divFAQHeight");
+        divsFAQArray[4].classList.remove("divFAQHeight");
+        paraFAQArray[0].classList.toggle("paraFAQDisplay");
+        paraFAQArray[1].classList.remove("paraFAQDisplay");
+        paraFAQArray[2].classList.remove("paraFAQDisplay");
+        paraFAQArray[3].classList.remove("paraFAQDisplay");
+        paraFAQArray[4].classList.remove("paraFAQDisplay");
+        titleFAQArray[0].classList.toggle("titleFAQActive");
+        titleFAQArray[1].classList.remove("titleFAQActive");
+        titleFAQArray[2].classList.remove("titleFAQActive");
+        titleFAQArray[3].classList.remove("titleFAQActive");
+        titleFAQArray[4].classList.remove("titleFAQActive");
+        chevronsFAQArray[0].classList.toggle("titleFAQActive");
+        chevronsFAQArray[1].classList.remove("titleFAQActive");
+        chevronsFAQArray[2].classList.remove("titleFAQActive");
+        chevronsFAQArray[3].classList.remove("titleFAQActive");
+        chevronsFAQArray[4].classList.remove("titleFAQActive");
+        chevronsFAQArray[0].classList.toggle("divChevronRotate");
+        chevronsFAQArray[1].classList.remove("divChevronRotate");
+        chevronsFAQArray[2].classList.remove("divChevronRotate");
+        chevronsFAQArray[3].classList.remove("divChevronRotate");
+        chevronsFAQArray[4].classList.remove("divChevronRotate");
+    } else if (e == chevronsFAQArray[1]) {
+        divsFAQArray[1].classList.toggle("divFAQHeight");
+        divsFAQArray[0].classList.remove("divFAQHeight");
+        divsFAQArray[2].classList.remove("divFAQHeight");
+        divsFAQArray[3].classList.remove("divFAQHeight");
+        divsFAQArray[4].classList.remove("divFAQHeight");
+        paraFAQArray[1].classList.toggle("paraFAQDisplay");
+        paraFAQArray[0].classList.remove("paraFAQDisplay");
+        paraFAQArray[2].classList.remove("paraFAQDisplay");
+        paraFAQArray[3].classList.remove("paraFAQDisplay");
+        paraFAQArray[4].classList.remove("paraFAQDisplay");
+        titleFAQArray[1].classList.toggle("titleFAQActive");
+        titleFAQArray[0].classList.remove("titleFAQActive");
+        titleFAQArray[2].classList.remove("titleFAQActive");
+        titleFAQArray[3].classList.remove("titleFAQActive");
+        titleFAQArray[4].classList.remove("titleFAQActive");
+        chevronsFAQArray[1].classList.toggle("titleFAQActive");
+        chevronsFAQArray[0].classList.remove("titleFAQActive");
+        chevronsFAQArray[2].classList.remove("titleFAQActive");
+        chevronsFAQArray[3].classList.remove("titleFAQActive");
+        chevronsFAQArray[4].classList.remove("titleFAQActive");
+        chevronsFAQArray[1].classList.toggle("divChevronRotate");
+        chevronsFAQArray[0].classList.remove("divChevronRotate");
+        chevronsFAQArray[2].classList.remove("divChevronRotate");
+        chevronsFAQArray[3].classList.remove("divChevronRotate");
+        chevronsFAQArray[4].classList.remove("divChevronRotate");
+    } else if (e == chevronsFAQArray[2]) {
+        divsFAQArray[2].classList.toggle("divFAQHeight");
+        divsFAQArray[1].classList.remove("divFAQHeight");
+        divsFAQArray[0].classList.remove("divFAQHeight");
+        divsFAQArray[3].classList.remove("divFAQHeight");
+        divsFAQArray[4].classList.remove("divFAQHeight");
+        paraFAQArray[2].classList.toggle("paraFAQDisplay");
+        paraFAQArray[1].classList.remove("paraFAQDisplay");
+        paraFAQArray[0].classList.remove("paraFAQDisplay");
+        paraFAQArray[3].classList.remove("paraFAQDisplay");
+        paraFAQArray[4].classList.remove("paraFAQDisplay");
+        titleFAQArray[2].classList.toggle("titleFAQActive");
+        titleFAQArray[1].classList.remove("titleFAQActive");
+        titleFAQArray[0].classList.remove("titleFAQActive");
+        titleFAQArray[3].classList.remove("titleFAQActive");
+        titleFAQArray[4].classList.remove("titleFAQActive");
+        chevronsFAQArray[2].classList.toggle("titleFAQActive");
+        chevronsFAQArray[1].classList.remove("titleFAQActive");
+        chevronsFAQArray[0].classList.remove("titleFAQActive");
+        chevronsFAQArray[3].classList.remove("titleFAQActive");
+        chevronsFAQArray[4].classList.remove("titleFAQActive");
+        chevronsFAQArray[2].classList.toggle("divChevronRotate");
+        chevronsFAQArray[1].classList.remove("divChevronRotate");
+        chevronsFAQArray[0].classList.remove("divChevronRotate");
+        chevronsFAQArray[3].classList.remove("divChevronRotate");
+        chevronsFAQArray[4].classList.remove("divChevronRotate");
+    } else if (e == chevronsFAQArray[3]) {
+        divsFAQArray[3].classList.toggle("divFAQHeight");
+        divsFAQArray[1].classList.remove("divFAQHeight");
+        divsFAQArray[2].classList.remove("divFAQHeight");
+        divsFAQArray[0].classList.remove("divFAQHeight");
+        divsFAQArray[4].classList.remove("divFAQHeight");
+        paraFAQArray[3].classList.toggle("paraFAQDisplay");
+        paraFAQArray[1].classList.remove("paraFAQDisplay");
+        paraFAQArray[2].classList.remove("paraFAQDisplay");
+        paraFAQArray[0].classList.remove("paraFAQDisplay");
+        paraFAQArray[4].classList.remove("paraFAQDisplay");
+        titleFAQArray[3].classList.toggle("titleFAQActive");
+        titleFAQArray[1].classList.remove("titleFAQActive");
+        titleFAQArray[2].classList.remove("titleFAQActive");
+        titleFAQArray[0].classList.remove("titleFAQActive");
+        titleFAQArray[4].classList.remove("titleFAQActive");
+        chevronsFAQArray[3].classList.toggle("titleFAQActive");
+        chevronsFAQArray[1].classList.remove("titleFAQActive");
+        chevronsFAQArray[2].classList.remove("titleFAQActive");
+        chevronsFAQArray[0].classList.remove("titleFAQActive");
+        chevronsFAQArray[4].classList.remove("titleFAQActive");
+        chevronsFAQArray[3].classList.toggle("divChevronRotate");
+        chevronsFAQArray[1].classList.remove("divChevronRotate");
+        chevronsFAQArray[2].classList.remove("divChevronRotate");
+        chevronsFAQArray[0].classList.remove("divChevronRotate");
+        chevronsFAQArray[4].classList.remove("divChevronRotate");
+    } else if (e == chevronsFAQArray[4]) {
+        divsFAQArray[4].classList.toggle("divFAQHeight");
+        divsFAQArray[1].classList.remove("divFAQHeight");
+        divsFAQArray[2].classList.remove("divFAQHeight");
+        divsFAQArray[3].classList.remove("divFAQHeight");
+        divsFAQArray[0].classList.remove("divFAQHeight");
+        paraFAQArray[4].classList.toggle("paraFAQDisplay");
+        paraFAQArray[1].classList.remove("paraFAQDisplay");
+        paraFAQArray[2].classList.remove("paraFAQDisplay");
+        paraFAQArray[3].classList.remove("paraFAQDisplay");
+        paraFAQArray[0].classList.remove("paraFAQDisplay");
+        titleFAQArray[4].classList.toggle("titleFAQActive");
+        titleFAQArray[1].classList.remove("titleFAQActive");
+        titleFAQArray[2].classList.remove("titleFAQActive");
+        titleFAQArray[3].classList.remove("titleFAQActive");
+        titleFAQArray[0].classList.remove("titleFAQActive");
+        chevronsFAQArray[4].classList.toggle("titleFAQActive");
+        chevronsFAQArray[1].classList.remove("titleFAQActive");
+        chevronsFAQArray[2].classList.remove("titleFAQActive");
+        chevronsFAQArray[3].classList.remove("titleFAQActive");
+        chevronsFAQArray[0].classList.remove("titleFAQActive");
+        chevronsFAQArray[4].classList.toggle("divChevronRotate");
+        chevronsFAQArray[1].classList.remove("divChevronRotate");
+        chevronsFAQArray[2].classList.remove("divChevronRotate");
+        chevronsFAQArray[3].classList.remove("divChevronRotate");
+        chevronsFAQArray[0].classList.remove("divChevronRotate");
+    }
+}
 
 // addEventListeners : 
 
@@ -301,11 +450,7 @@ techArray.forEach(element => {
     })
 });
 
-let digit = document.querySelectorAll(".digit");
-let digitArray = Array.from(digit);
-let month = document.querySelectorAll(".month");
-let monthArray = Array.from(month);
-
+// pour le toggle et les prix de la section 7 - Prices
 blue.addEventListener("click", ()=>{
     textToggleArray.forEach(element => {
         element.classList.toggle("textToggleBlue");
@@ -328,3 +473,120 @@ blue.addEventListener("click", ()=>{
         });
     }
 })
+
+
+// pour la section 8 - FAQ
+chevronsFAQArray.forEach(element => {
+    element.addEventListener("click", () => {
+        addHeight(element);
+    })
+});
+
+// titleFAQArray.forEach(element => {
+//     element.addEventListener("mouseover", () => {
+//         element.classList.add("titleFAQActiveBis");
+//     })
+//     element.addEventListener("mouseout", () => {
+//         element.classList.remove("titleFAQActiveBis");
+//     })
+// });
+// chevronsFAQArray.forEach(element => {
+//     element.addEventListener("mouseover", () => {
+//         element.classList.add("titleFAQActiveBis");
+//     })
+//     element.addEventListener("mouseout", () => {
+//         element.classList.remove("titleFAQActiveBis");
+//     })
+// });
+
+for (let i = 0; i < titleFAQArray.length; i++) {
+    for (let j = 0; j < chevronsFAQArray.length; j++) {
+        if (i == j  && i == 0) {
+            titleFAQArray[0].addEventListener("mouseover", () => {
+                titleFAQArray[0].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[0].classList.toggle("titleFAQActiveBis");
+            })
+            titleFAQArray[0].addEventListener("mouseout", () => {
+                titleFAQArray[0].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[0].classList.toggle("titleFAQActiveBis");
+            })
+            chevronsFAQArray[0].addEventListener("mouseover", () => {
+                titleFAQArray[0].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[0].classList.toggle("titleFAQActiveBis");
+            })
+            chevronsFAQArray[0].addEventListener("mouseout", () => {
+                titleFAQArray[0].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[0].classList.toggle("titleFAQActiveBis");
+            })
+        } else if (i == j  && i == 1) {
+            titleFAQArray[1].addEventListener("mouseover", () => {
+                titleFAQArray[1].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[1].classList.toggle("titleFAQActiveBis");
+            })
+            titleFAQArray[1].addEventListener("mouseout", () => {
+                titleFAQArray[1].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[1].classList.toggle("titleFAQActiveBis");
+            })
+            chevronsFAQArray[1].addEventListener("mouseover", () => {
+                titleFAQArray[1].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[1].classList.toggle("titleFAQActiveBis");
+            })
+            chevronsFAQArray[1].addEventListener("mouseout", () => {
+                titleFAQArray[1].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[1].classList.toggle("titleFAQActiveBis");
+            })
+        } else if (i == j  && i == 2) {
+            titleFAQArray[2].addEventListener("mouseover", () => {
+                titleFAQArray[2].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[2].classList.toggle("titleFAQActiveBis");
+            })
+            titleFAQArray[2].addEventListener("mouseout", () => {
+                titleFAQArray[2].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[2].classList.toggle("titleFAQActiveBis");
+            })
+            chevronsFAQArray[2].addEventListener("mouseover", () => {
+                titleFAQArray[2].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[2].classList.toggle("titleFAQActiveBis");
+            })
+            chevronsFAQArray[2].addEventListener("mouseout", () => {
+                titleFAQArray[2].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[2].classList.toggle("titleFAQActiveBis");
+            })
+        } else if (i == j  && i == 3) {
+            titleFAQArray[3].addEventListener("mouseover", () => {
+                titleFAQArray[3].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[3].classList.toggle("titleFAQActiveBis");
+            })
+            titleFAQArray[3].addEventListener("mouseout", () => {
+                titleFAQArray[3].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[3].classList.toggle("titleFAQActiveBis");
+            })
+            chevronsFAQArray[3].addEventListener("mouseover", () => {
+                titleFAQArray[3].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[3].classList.toggle("titleFAQActiveBis");
+            })
+            chevronsFAQArray[3].addEventListener("mouseout", () => {
+                titleFAQArray[3].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[3].classList.toggle("titleFAQActiveBis");
+            })
+        } else if (i == j  && i == 4) {
+            titleFAQArray[4].addEventListener("mouseover", () => {
+                titleFAQArray[4].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[4].classList.toggle("titleFAQActiveBis");
+            })
+            titleFAQArray[4].addEventListener("mouseout", () => {
+                titleFAQArray[4].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[4].classList.toggle("titleFAQActiveBis");
+            })
+            chevronsFAQArray[4].addEventListener("mouseover", () => {
+                titleFAQArray[4].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[4].classList.toggle("titleFAQActiveBis");
+            })
+            chevronsFAQArray[4].addEventListener("mouseout", () => {
+                titleFAQArray[4].classList.toggle("titleFAQActiveBis");
+                chevronsFAQArray[4].classList.toggle("titleFAQActiveBis");
+            })
+        } 
+    }
+    
+}

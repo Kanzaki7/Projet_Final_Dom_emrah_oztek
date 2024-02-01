@@ -5,6 +5,9 @@ https://alvarotrigo.com/blog/drop-down-menu-javascript/ */
 /* - pour le ruban sur la dernière carte de la section Prices : */
 /* https://stackoverflow.com/questions/30503866/right-corner-ribbon-on-a-div-css */
 
+/* - pour la rotation du chevron dans la section 8 - FAQ */
+/* https://codepen.io/rezk/pen/PegNRY */
+
 body {
     margin: 0;
     padding: 0;
@@ -98,14 +101,17 @@ nav {
     border-bottom: 3px solid white;
     width: 57px;
     text-align: center;
-    font-weight: bolder;
+    font-weight: 600;
+    font-size: 16px;
     cursor: pointer;
 }
 
 .textGray {
     cursor: pointer;
     text-align: center;
-    font-weight: bolder;
+    font-weight: 600;
+    color: #d7c3f8;
+    font-size: 16px;
 }
 
 .textGray::after {
@@ -798,7 +804,7 @@ cursor: pointer;
     align-items: center;
     overflow: hidden;
     width: 2550px;
-    height: 330px;
+    height: 430px;
     /* background-color: red;  */
 }
 
@@ -833,7 +839,7 @@ cursor: pointer;
     justify-content: center;
     align-items: start;
     position: relative;
-    height: 70%;
+    height: 85%;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -859,7 +865,7 @@ cursor: pointer;
     font-weight: 800;
     font-family: 'Poppins', sans-serif;
     margin-left: 35px;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 .paraCard {
@@ -1048,7 +1054,6 @@ cursor: pointer;
     height: 950px;
     width: 100%;
     background-color: #f9f8ff;
-
 }
 
 .sec7Div1 {
@@ -1270,3 +1275,146 @@ cursor: pointer;
     transform-origin: 0% 100%;
     background-color: #5846f9;
 }
+
+
+/* section 8 - F.A.Q */
+
+.section-FAQ {
+    height: 1200px;
+    width: 100%;
+    background-color: #742ede;
+}
+
+.sec8Div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30%;
+}
+
+.servTitle8 {
+    color: white;
+    font-size: 33px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.ligneTitle8 {
+    height: 5px;
+    width: 50px;
+    background-color: #c3abf5;
+}
+
+.sec8Para {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+    width: 90%;
+    color: white;
+}
+
+.sec8Div2{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: green; */
+    gap: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.divFAQ {
+    width: 80%;
+    height: 90px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 7px;
+    transition: all ease-in-out .4s;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.divFAQHeight {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.divFAQ1half {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleFAQ {
+    color: #314c67;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.titleFAQActive {
+    color: #5b49f9;
+}
+.titleFAQActiveBis {
+    color: #9f83fd;
+}
+
+.paraFAQ {
+    color: black;
+    display: none;
+    opacity: 0;
+    transition: all ease-in-out .5s;
+    margin-left: 20px;
+}
+
+.paraFAQDisplay {
+    opacity: 1;
+    display: block;
+}
+
+.quesTitle {
+    display: flex;
+    gap: 20px;
+    margin-left: 25px;
+}
+
+.divQuestion {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #8576fb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-question {
+    color: #8576fb;
+    font-size: 18px;
+}
+
+.divChevron {
+    margin-right: 40px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+
+.divChevronRotate {
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+
+
+
