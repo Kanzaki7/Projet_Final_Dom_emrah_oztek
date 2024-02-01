@@ -25,14 +25,30 @@ let circlesArray = Array.from(circles);
 
 let carousel = document.querySelector(".carousel");
 
+let titleTech = document.querySelectorAll(".titleTech");
+let techArray = Array.from(titleTech);
+let innerText = document.querySelector(".innerText");
+let divImg = document.querySelectorAll(".divImg");
+let divImgHidden = document.querySelectorAll(".divImgHidden");
+let divImgHiddenBis = document.querySelectorAll(".divImgHiddenBis");
+let divImgArray = Array.from(divImg);
+let divImgHiddenArray = Array.from(divImgHidden);
+let divImgHiddenBisArray = Array.from(divImgHiddenBis);
+
 // déclaration des fonctions 
 
 let addActive = (e) => {
     e.classList.add("activeCircle");
 }
-
 let removeActive = (e) => {
     e.classList.remove("activeCircle");
+}
+
+let addTechActive = (e) => {
+    e.classList.add("titleTechDark");
+}
+let removeTechActive = (e) => {
+    e.classList.remove("titleTechDark");
 }
 
 let transform = (e) => {
@@ -93,7 +109,7 @@ setInterval(() => {
         circlesArray[0].classList.remove("activeCircle");
         movement = 975;
     }
-}, 2000)
+}, 5000)
 
 
 
@@ -218,5 +234,64 @@ circlesArray.forEach(element => {
         });
         transform(element);
         addActive(element);
+    })
+});
+
+// pour les titres de la section6
+techArray.forEach(element => {
+    element.addEventListener("click", () => {
+        techArray.forEach(element => {
+            removeTechActive(element);
+        });
+        addTechActive(element);
+        if (element.innerText == "IA") {
+            innerText.innerText = "IA";
+            setTimeout(() => {
+                divImgArray[0].children[0].style = "opacity: 1";
+                divImgArray[0].children[1].style = "opacity: 1";
+                divImgArray[1].children[0].style = "opacity: 1";
+                divImgArray[1].children[1].style = "opacity: 1";
+                divImgArray[2].children[0].style = "opacity: 1";
+                divImgArray[2].children[1].style = "opacity: 1";
+            }, 200);
+            divImgHiddenArray[0].style = "opacity: 0";
+            divImgHiddenArray[1].style = "opacity: 0";
+            divImgHiddenArray[2].style = "opacity: 0";
+            divImgHiddenBisArray[0].style = "opacity: 0";
+            divImgHiddenBisArray[1].style = "opacity: 0";
+            divImgHiddenBisArray[2].style = "opacity: 0";
+        } else if (element.innerText == "DEV") {
+            innerText.innerText = "Development";
+            divImgArray[0].children[0].style = "opacity: 0";
+            divImgArray[0].children[1].style = "opacity: 0";
+            divImgArray[1].children[0].style = "opacity: 0";
+            divImgArray[1].children[1].style = "opacity: 0";
+            divImgArray[2].children[0].style = "opacity: 0";
+            divImgArray[2].children[1].style = "opacity: 0";
+            setTimeout(() => {
+                divImgHiddenArray[0].style = "opacity: 1";
+                divImgHiddenArray[1].style = "opacity: 1";
+                divImgHiddenArray[2].style = "opacity: 1";
+            }, 200);
+            divImgHiddenBisArray[0].style = "opacity: 0";
+            divImgHiddenBisArray[1].style = "opacity: 0";
+            divImgHiddenBisArray[2].style = "opacity: 0";
+        } else if (element.innerText == "UI/UX") {
+            innerText.innerText = "UI/UX";
+            divImgArray[0].children[0].style = "opacity: 0";
+            divImgArray[0].children[1].style = "opacity: 0";
+            divImgArray[1].children[0].style = "opacity: 0";
+            divImgArray[1].children[1].style = "opacity: 0";
+            divImgArray[2].children[0].style = "opacity: 0";
+            divImgArray[2].children[1].style = "opacity: 0";
+            divImgHiddenArray[0].style = "opacity: 0";
+            divImgHiddenArray[1].style = "opacity: 0";
+            divImgHiddenArray[2].style = "opacity: 0";
+            setTimeout(() => {
+                divImgHiddenBisArray[0].style = "opacity: 1";
+                divImgHiddenBisArray[1].style = "opacity: 1";
+                divImgHiddenBisArray[2].style = "opacity: 1";
+            }, 200);
+        }
     })
 });
