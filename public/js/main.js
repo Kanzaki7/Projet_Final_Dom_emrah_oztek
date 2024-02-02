@@ -4,7 +4,13 @@
 
 
 // déclaration des variables :
+let sections = document.querySelectorAll("section");
 
+let navbar = document.querySelector('nav');
+let divCachéNav = document.querySelector('.divCachéNav');
+
+let textGray = document.querySelectorAll(".textGray");
+let textGrayArray = Array.from(textGray);
 
 let textStarted = document.querySelector(".textStarted");
 let textStarted2 = document.querySelector(".textStarted2");
@@ -590,3 +596,38 @@ for (let i = 0; i < titleFAQArray.length; i++) {
     }
     
 }
+
+
+
+// pour la couleur de la navbar
+window.addEventListener('scroll', function(e) {
+  let lastPosition = window.scrollY;
+  if (lastPosition > 50 ) {
+    divCachéNav.classList.add('navActive');
+  } else if (navbar.classList.contains('navActive')) {
+    divCachéNav.classList.remove('navActive');
+  } else {
+    divCachéNav.classList.remove('navActive');
+  }
+})
+
+
+
+window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      let sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 50) {
+        current = section.getAttribute("id");
+      }
+    });
+  
+    textGrayArray.forEach((element) => {
+      element.classList.remove("textWhite");
+      element.classList.add("textGray");
+      if (element.classList.contains(current)) {
+        element.classList.add("textWhite");
+        element.classList.remove("textGray");
+      }
+    });
+  });

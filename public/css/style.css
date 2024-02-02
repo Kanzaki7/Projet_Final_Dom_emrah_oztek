@@ -53,15 +53,20 @@ nav {
     /* position: relative; */
 }
 
+.navActive {
+    background: linear-gradient(135deg, rgb(85, 0, 255) 50%, rgb(85, 0, 255));
+    
+}
+
 
 .divCachéNav {
     height: 10%;
     width: 100%;
-    background: linear-gradient(135deg, rgb(85, 0, 255) 50%, rgb(85, 0, 255));
     opacity: 0.7;
     z-index: -1;
     position: fixed;
     /* position: absolute; */
+    transition: all ease-in-out 1s;
 }
 
 
@@ -96,6 +101,14 @@ nav {
     font-weight: bold;
 }
 
+.textGray {
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    color: #d7c3f8;
+    font-size: 16px;
+}
+
 .textWhite {
     color: white;
     border-bottom: 3px solid white;
@@ -104,14 +117,6 @@ nav {
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
-}
-
-.textGray {
-    cursor: pointer;
-    text-align: center;
-    font-weight: 600;
-    color: #d7c3f8;
-    font-size: 16px;
 }
 
 .textGray::after {
@@ -1745,6 +1750,7 @@ footer {
     height: 50px;
     border-radius: 5px;
     font-size: 22px;
+    border: none;
 }
 
 .divInputFooter {
