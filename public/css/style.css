@@ -2036,6 +2036,18 @@ footer {
         top: 425px;
     }
 
+    /* section 6 */
+
+    .section-tech {
+        width: 90%;
+        margin-top: 300px;
+    }
+
+    .imagesDiv {
+        width: 90%;
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
