@@ -2082,6 +2082,21 @@ footer {
         height: 700px;
     }
 
+    /* section 7 */
+
+    .divFAQ {
+        height: 300px;
+    }
+
+    .quesTitle {
+        margin: 0px;
+        font-size: 10px;
+    }
+
+    .divChevron {
+        margin: 0px;
+    }
+
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
