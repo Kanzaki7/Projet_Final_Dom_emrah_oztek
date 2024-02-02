@@ -1845,3 +1845,127 @@ footer {
     color: white;
     font-size: 18px;
 }
+
+
+
+
+/* media queries */
+
+
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+
+    /* section 1 */
+
+    .section-hero {
+        flex-direction: column;
+        width: 100%;
+        /* height: 900px; */
+    }
+    
+    .hero {
+        width: 100%;
+        justify-content: start;
+        align-items: start;
+        height: 300px;
+        flex-wrap: wrap;
+    }
+
+    .textHero {
+        width: 90%;
+        height: 20%;
+        justify-content: center;
+        align-items: center;
+        /* background-color: green; */
+    }
+
+    .textDigital {
+        font-size: 15px;
+    }
+
+    .hero-title {
+        font-size: 15px;
+        /* width: 30%; */
+        margin: 0px;
+        /* background-color: yellow; */
+        width: 90px;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        height: 100px;
+    }
+
+    .menu-nav {
+        flex-direction: row;
+        
+    }
+
+    .textGray {
+        font-size: 7px;
+    }
+
+    .menu {
+        flex-direction: row;
+        font-size: 10px;
+        /* width: 60%; */
+        gap: 2px;
+        /* background-color: red; */
+    }
+
+    .started {
+        width: 40px;
+        padding: 0;
+        font-size: 10px;
+        /* background-color: green; */
+    }
+
+    .textStarted {
+        width: 130px;
+        padding: 0;
+    }
+
+    .divImgHero {
+        width: 80%;
+        height: 50%;
+        /* background-color: orange; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgHero {
+        width: 100%;
+    }
+
+
+    /* section 2 */
+
+    .section-readMore {
+        width: 100%;
+        height: 1500px;
+        flex-direction: column;
+    }
+
+    .Voluptatem {
+        flex-direction: column;
+        /* height: 70%; */
+        gap: 100px;
+    }
+
+    .sec2Voluptatem {
+        width: 90%;
+    }
+
+    .sec2Img {
+        width: 90%;
+    }
+
+    .numbers {
+        flex-direction: column;
+    }
+
+
+    
+}
