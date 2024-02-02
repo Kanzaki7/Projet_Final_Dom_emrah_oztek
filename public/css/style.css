@@ -2009,6 +2009,33 @@ footer {
         width: 100%;
     }
 
+    /* section 5 */
+
+    .section-testimonials {
+        width: 90%;
+        /* height: 2000px; */
+    }
+
+    .container {
+        width: 90%;
+        height: 700px;
+    }
+
+    .carousel {
+        width: 90%;
+        height: 700px;
+    }
+
+    .divCards {
+        width: 100%;
+        height: 700px;
+        gap: 100px;
+    }
+
+    .cardAvatar {
+        top: 425px;
+    }
+
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
