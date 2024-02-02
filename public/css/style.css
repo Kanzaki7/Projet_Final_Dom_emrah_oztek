@@ -2082,7 +2082,7 @@ footer {
         height: 700px;
     }
 
-    /* section 7 */
+    /* section 8 */
 
     .divFAQ {
         height: 300px;
@@ -2096,6 +2096,34 @@ footer {
     .divChevron {
         margin: 0px;
     }
+
+    /* section 9 */
+
+    .sec9Div1 {
+        margin-bottom: 150px;
+    }
+
+    .sec9Div2 {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* gap: 200px; */
+    }
+
+    .sec9div21half {
+        width: 90%;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .ePhone {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 
 }
 
