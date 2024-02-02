@@ -1298,13 +1298,17 @@ cursor: pointer;
     width: 160px;
     height: 50px;
     font-weight: 600;
-    background-color: #6f33e3;
+    background: linear-gradient(45deg, rgb(85, 0, 255) 50%, rgb(128, 0, 255));
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.buyLinear {
+    background: linear-gradient(0deg, rgb(128, 0, 255) 50%, rgb(85, 0, 255))
 }
 
 /* ruban */
@@ -1332,7 +1336,7 @@ cursor: pointer;
 .section-FAQ {
     height: 1100px;
     width: 100%;
-    background-color: #742ede;
+    background: linear-gradient(45deg, rgb(85, 0, 255) 50%, rgb(128, 0, 255));
 }
 
 .sec8Div1 {

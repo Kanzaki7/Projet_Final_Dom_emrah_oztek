@@ -67,6 +67,9 @@ let titleFAQArray = Array.from(titleFAQ);
 let divChevron = document.querySelectorAll("divChevron");
 let divChevronArray = Array.from(divChevron);
 
+let buy = document.querySelectorAll(".buy");
+let buyArray = Array.from(buy);
+
 
 // déclaration des fonctions 
 
@@ -82,6 +85,13 @@ let addTechActive = (e) => {
 }
 let removeTechActive = (e) => {
     e.classList.remove("titleTechDark");
+
+}
+let addBuyActive = (e) => {
+    e.classList.add("buyLinear");
+}
+let removeBuyActive = (e) => {
+    e.classList.remove("buyLinear");
 }
 
 let transform = (e) => {
@@ -399,6 +409,21 @@ circlesArray.forEach(element => {
         });
         transform(element);
         addActive(element);
+    })
+});
+
+buyArray.forEach(element => {
+    element.addEventListener("mouseover", () => {
+        buyArray.forEach(element => {
+            removeBuyActive(element);
+        });
+        addBuyActive(element);
+    })
+    element.addEventListener("mouseout", () => {
+        buyArray.forEach(element => {
+            removeBuyActive(element);
+        });
+        addBuyActive(element);
     })
 });
 
