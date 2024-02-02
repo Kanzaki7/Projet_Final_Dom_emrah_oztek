@@ -2,9 +2,14 @@
 // - pour l'animation du dropdown, l'exemple 7 de ce site :
 // https://alvarotrigo.com/blog/drop-down-menu-javascript/
 
+// -référence pour le changement d'active sur les éléments de la navbar : 
+// https://dev.to/areeburrub/change-nav-link-s-style-as-you-scroll-4p62
+
 
 // déclaration des variables :
 let sections = document.querySelectorAll("section");
+
+let boxArrow = document.querySelector(".box-arrow");
 
 let navbar = document.querySelector('nav');
 let divCachéNav = document.querySelector('.divCachéNav');
@@ -612,13 +617,20 @@ window.addEventListener('scroll', function(e) {
 })
 
 
+// pour le changement d'active sur les éléments de la navbar et le changement 
+// de couleur sur la navbar lorsqu'on scroll:
 
+let current = "";
 window.addEventListener("scroll", () => {
-    let current = "";
     sections.forEach((section) => {
       let sectionTop = section.offsetTop;
       if (pageYOffset >= sectionTop - 50) {
         current = section.getAttribute("id");
+        if (current == "Home") {
+            boxArrow.style = "display: none";
+        } else {
+            boxArrow.style = "display: flex";
+        }        
       }
     });
   
@@ -630,4 +642,5 @@ window.addEventListener("scroll", () => {
         element.classList.remove("textGray");
       }
     });
-  });
+
+});
